@@ -1,0 +1,20 @@
+$background: #ebebeb;
+$accent: #FFCC25;
+
+:host {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    background-color: $background;
+}
+
+.heading {
+    margin: 0 0 0.5em;
+    font-size: 48px;
+    color: $accent;
+    font-family: 'Bree Serif', serif;
+}
+
+.subheading {
+    color: #3c3c3c;
+}
