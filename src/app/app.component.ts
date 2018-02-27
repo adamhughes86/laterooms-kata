@@ -17,6 +17,7 @@ export class AppComponent {
   }
 
   // Filter by argument
+  // @TODO: These should toggle
   filter(query: string) {
     this.hotels = this.hotels.filter((hotel) =>
       hotel.Facilities.indexOf(query) > -1
