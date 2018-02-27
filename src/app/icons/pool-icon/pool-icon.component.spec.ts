@@ -22,4 +22,11 @@ describe('PoolIconComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render an icon', async(() => {
+    const fixture = TestBed.createComponent(PoolIconComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('svg'));
+  }));
 });

@@ -22,4 +22,11 @@ describe('StarRatingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render a rating', async(() => {
+    const fixture = TestBed.createComponent(StarRatingComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('svg'));
+  }));
 });

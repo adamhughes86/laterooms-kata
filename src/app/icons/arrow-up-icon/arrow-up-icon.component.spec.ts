@@ -22,4 +22,11 @@ describe('ArrowUpIconComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render an icon', async(() => {
+    const fixture = TestBed.createComponent(ArrowUpIconComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('svg'));
+  }));
 });
