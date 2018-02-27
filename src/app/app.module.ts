@@ -9,6 +9,9 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import { GymIconComponent } from './icons/gym-icon/gym-icon.component';
 import { PoolIconComponent } from './icons/pool-icon/pool-icon.component';
 import { ParkingIconComponent } from './icons/parking-icon/parking-icon.component';
+import { ArrowDownIconComponent } from './icons/arrow-down-icon/arrow-down-icon.component';
+import { ArrowUpIconComponent } from './icons/arrow-up-icon/arrow-up-icon.component';
+import { VisibleIconComponent } from './icons/visible-icon/visible-icon.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ParkingIconComponent } from './icons/parking-icon/parking-icon.componen
     StarRatingComponent,
     GymIconComponent,
     PoolIconComponent,
-    ParkingIconComponent
+    ParkingIconComponent,
+    ArrowDownIconComponent,
+    ArrowUpIconComponent,
+    VisibleIconComponent
   ],
   imports: [
     BrowserModule

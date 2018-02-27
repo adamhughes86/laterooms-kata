@@ -1,7 +1,60 @@
+$toolbarBackground: #3c3c3c;
+$buttonBackground: #ebebeb;
+$accent: #FFCC25;
+$accentDark: #E19120;
+
 .hotel-listing {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;
     margin: 40px 20px;
     max-width: 1480px;
+}
+
+.list-tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $toolbarBackground;
+}
+
+.label {
+    color: #fff;
+    font-size: 14px;
+}
+
+.sort-tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.filter-tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    height: 40px;
+    background-color: $buttonBackground;
+    border: 1px solid $accent;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $accentDark;
+    }
+
+    > * {
+        margin-right: 5px;
+    }
 }

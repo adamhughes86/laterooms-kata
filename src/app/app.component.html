@@ -1,14 +1,20 @@
 <app-hero></app-hero>
 
-Sort:
-<button (click)="orderHotelsAsc()">Asc</button>
-<button (click)="orderHotelsDesc()">Desc</button>
+<section class="list-tools">
+  <div class="sort-tools">
+    <span class="label">Sort:</span>
+    <button (click)="orderHotelsAsc()"><app-arrow-up-icon></app-arrow-up-icon>Asc</button>
+    <button (click)="orderHotelsDesc()"><app-arrow-down-icon></app-arrow-down-icon>Desc</button>
+  </div>
 
-Only show hotels with a:
-<button (click)="filter('car park')"><app-parking-icon></app-parking-icon>Car Park</button>
-<button (click)="filter('gym')"><app-gym-icon></app-gym-icon>Gym</button>
-<button (click)="filter('pool')"><app-pool-icon></app-pool-icon>Pool</button>
-<button (click)="resetFilter()">Show all</button>
+  <div class="filter-tools">
+    <span class="label">Only show hotels with a:</span>
+    <button (click)="filter('car park')"><app-parking-icon></app-parking-icon>Car Park</button>
+    <button (click)="filter('gym')"><app-gym-icon></app-gym-icon>Gym</button>
+    <button (click)="filter('pool')"><app-pool-icon></app-pool-icon>Pool</button>
+    <button (click)="resetFilter()"><app-visible-icon></app-visible-icon>Show all</button>
+  </div>
+</section>
 
 <section *ngIf="hotels" class="hotel-listing">
 
