@@ -1,5 +1,9 @@
 <app-hero></app-hero>
 
+Sort:
+<button (click)="orderHotelsAsc()">Asc</button>
+<button (click)="orderHotelsDesc()">Desc</button>
+
 <section *ngIf="hotels" class="hotel-listing">
 
   <app-hotel-card

@@ -15,4 +15,30 @@ export class AppComponent {
   ngOnInit() {
     this.hotels = this.dataService.fetchHotels();
   }
+
+  // Hotels in Ascending Order
+  orderHotelsAsc() {
+    this.hotels = this.hotels.sort((a: IHotelListing, b: IHotelListing) => {
+      if (a.StarRating < b.StarRating) {
+        return -1;
+      } else if (a.StarRating > b.StarRating) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
+
+  // Hotels in Descending Order
+  orderHotelsDesc() {
+    this.hotels = this.hotels.sort((a: IHotelListing, b: IHotelListing) => {
+      if (a.StarRating > b.StarRating) {
+        return -1;
+      } else if (a.StarRating < b.StarRating) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
 }
