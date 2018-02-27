@@ -1,11 +1,10 @@
-$background: #ebebeb;
-$accent: #FFCC25;
+@import "../../../assets/scss/theme";
 
 :host {
     display: block;
     padding: 20px;
     text-align: center;
-    background-color: $background;
+    background-color: $lightGreyBackground;
 }
 
 .heading {

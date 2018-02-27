@@ -1,28 +1,43 @@
-$toolbarBackground: #3c3c3c;
-$buttonBackground: #ebebeb;
-$accent: #FFCC25;
-$accentDark: #E19120;
+@import "../assets/scss/mq";
+@import "../assets/scss/theme";
 
 .hotel-listing {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 40px;
     margin: 40px 20px;
     max-width: 1480px;
+
+    @include breakpoint(small) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .list-tools {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: $toolbarBackground;
+    background-color: $darkGreyBackground;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
 }
 
 .label {
+    margin-bottom: 10px;
     color: #fff;
     font-size: 14px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
 }
 
 .sort-tools {
@@ -30,13 +45,22 @@ $accentDark: #E19120;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 10px;
+
+    @include breakpoint(medium) {
+        margin-bottom: 0;
+    }
 }
 
 .filter-tools {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
 }
 
 button {
@@ -44,10 +68,14 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0 8px;
+    margin: 0 8px 10px;
     height: 40px;
-    background-color: $buttonBackground;
+    background-color: $lightGreyBackground;
     border: 1px solid $accent;
+
+    @include breakpoint(medium) {
+        margin: 0 8px;
+    }
 
     &:hover {
         cursor: pointer;
