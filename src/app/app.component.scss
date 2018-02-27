@@ -1,0 +1,7 @@
+.hotel-listing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin: 40px 20px;
+    max-width: 1480px;
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from './services/data.service';
+import { DataService, IHotelListing } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,12 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  public hotels: IHotelListing[];
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    console.log(this.dataService.fetchHotels());
+    this.hotels = this.dataService.fetchHotels();
   }
 }

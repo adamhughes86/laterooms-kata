@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IHotelListing } from '../../services/data.service';
 
 @Component({
   selector: 'app-hotel-card',
   templateUrl: './hotel-card.component.html',
   styleUrls: ['./hotel-card.component.scss']
 })
-export class HotelCardComponent implements OnInit {
+export class HotelCardComponent {
+
+  @Input() data: IHotelListing;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

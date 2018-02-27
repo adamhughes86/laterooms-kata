@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface IHotelListing {
+export interface IHotelListing {
   Name: string;
   StarRating: number;
   Facilities: Array<string>;
@@ -11,17 +11,32 @@ export class DataService {
 
   public hotelData: IHotelListing[] = [
     {
-      "Name": "hotelone",
+      "Name": "Hotel one",
       "StarRating": 5,
       "Facilities": ["car park", "pool"]
     },
     {
-      "Name": "hoteltwo",
+      "Name": "Hotel two",
       "StarRating": 3,
       "Facilities": ["car park", "gym"]
     },
     {
-      "Name": "hotelthree",
+      "Name": "Hotel three",
+      "StarRating": 3,
+      "Facilities": []
+    },
+    {
+      "Name": "Hotel four",
+      "StarRating": 5,
+      "Facilities": ["car park", "pool"]
+    },
+    {
+      "Name": "Hotel five",
+      "StarRating": 3,
+      "Facilities": ["car park", "gym"]
+    },
+    {
+      "Name": "Hotel six",
       "StarRating": 3,
       "Facilities": []
     }
