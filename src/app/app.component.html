@@ -4,6 +4,12 @@ Sort:
 <button (click)="orderHotelsAsc()">Asc</button>
 <button (click)="orderHotelsDesc()">Desc</button>
 
+Only show hotels with a:
+<button (click)="filter('car park')"><app-parking-icon></app-parking-icon>Car Park</button>
+<button (click)="filter('gym')"><app-gym-icon></app-gym-icon>Gym</button>
+<button (click)="filter('pool')"><app-pool-icon></app-pool-icon>Pool</button>
+<button (click)="resetFilter()">Show all</button>
+
 <section *ngIf="hotels" class="hotel-listing">
 
   <app-hotel-card

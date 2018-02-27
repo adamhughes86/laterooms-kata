@@ -13,7 +13,7 @@ export class DataService {
     {
       "Name": "Hotel one",
       "StarRating": 5,
-      "Facilities": ["car park", "pool"]
+      "Facilities": ["car park", "pool", "gym"]
     },
     {
       "Name": "Hotel two",
@@ -33,7 +33,7 @@ export class DataService {
     {
       "Name": "Hotel five",
       "StarRating": 3,
-      "Facilities": ["car park", "gym"]
+      "Facilities": ["pool", "gym"]
     },
     {
       "Name": "Hotel six",

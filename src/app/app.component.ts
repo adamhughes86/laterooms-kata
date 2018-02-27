@@ -16,6 +16,18 @@ export class AppComponent {
     this.hotels = this.dataService.fetchHotels();
   }
 
+  // Filter by argument
+  filter(query: string) {
+    this.hotels = this.hotels.filter((hotel) =>
+      hotel.Facilities.indexOf(query) > -1
+    );
+  }
+
+  // Reset filter and display all hotels
+  resetFilter() {
+    this.hotels = this.dataService.fetchHotels();
+  }
+
   // Hotels in Ascending Order
   orderHotelsAsc() {
     this.hotels = this.hotels.sort((a: IHotelListing, b: IHotelListing) => {

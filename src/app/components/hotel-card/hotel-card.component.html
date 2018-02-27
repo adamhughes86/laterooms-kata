@@ -3,3 +3,15 @@
 <app-star-rating [rating]="data.StarRating"></app-star-rating>
 
 <img class="image" src="https://farm5.staticflickr.com/4486/37447894460_ccdfae20e9_m_d.jpg" alt=""/>
+
+<ng-container *ngIf="data.Facilities.length">
+    <h3 class="facilities-heading">Facilities available:</h3>
+
+    <ul class="facilities-list">
+        <li *ngFor="let facility of data.Facilities">
+            <app-pool-icon *ngIf="facility === 'pool'"></app-pool-icon>
+            <app-gym-icon *ngIf="facility === 'gym'"></app-gym-icon>
+            <app-parking-icon *ngIf="facility === 'car park'"></app-parking-icon>
+        </li>
+    </ul>
+</ng-container>
